@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KakaoLogin</title>
+</head>
+<body>
+    <!-- kakao button -->
+    <div class="text-center">
+        <a href="https://kauth.kakao.com/oauth/authorize"
+           th:href="@{https://kauth.kakao.com/oauth/authorize(client_id=${kakaoApiKey}, redirect_uri=${redirectUri}, response_type='code')}">
+            <img src="/img/kakao_login_medium_narrow.png">
+        </a>
+    </div>
+</body>
+</html>

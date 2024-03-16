@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+<h2>User Registration</h2>
+<form action="/register" method="post">
+
+    <input type="hidden" name="email" th:value="${memberDTO.email}">
+    <input type="hidden" name="name" th:value="${memberDTO.name}">
+    <input type="hidden" name="accessToken" th:value="${memberDTO.accessToken}">
+
+    <label for="nickname">Nickname:</label><br>
+    <input type="text" id="nickname" name="nickname" required><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>

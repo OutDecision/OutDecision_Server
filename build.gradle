@@ -32,6 +32,12 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	//카카오 로그인 api 관련 의존성
+	implementation'com.google.code.gson:gson:2.8.7'
 }
 
 tasks.named('bootBuildImage') {

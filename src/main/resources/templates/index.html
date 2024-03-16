@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KakaoLogout</title>
+</head>
+<body>
+<li th:text="|인가코드 = ${code}|">code</li>
+<li th:text="|유효토큰 = ${access_token}|">code</li>
+<li th:text="|사용자정보 = ${userInfo}|">code</li>
+<li th:text="|동의정보 = ${agreementInfo}|">code</li>
+<!--<a href="https://kauth.kakao.com/oauth/logout?client_id=ff5cf97a9d4c9338b4e136cc7d613e69&logout_redirect_uri=http://localhost:8080/login">로그아웃</a>-->
+<a href="/logout">로그아웃</a>
+</body>
+</html>
