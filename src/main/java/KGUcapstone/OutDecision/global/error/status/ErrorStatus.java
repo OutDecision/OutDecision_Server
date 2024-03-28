@@ -17,7 +17,17 @@ public enum ErrorStatus implements BaseErrorCode {
     _FORBIDDEN(HttpStatus.FORBIDDEN, "COMMON403", "금지된 요청입니다."),
 
     // For test
-    TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "이거는 테스트");
+    TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "이거는 테스트"),
+
+    // 해당 Member 존재 X
+    MEMBER_NOT_FOUND(HttpStatus.BAD_REQUEST, "MEMBER400", "존재하지 않는 회원입니다."),
+
+    // 이전 비밀번호가 일치 X
+    PASSWORD_MISMATCH(HttpStatus.BAD_REQUEST, "PASSWORD400", "현재 비밀번호와 일치하지 않습니다."),
+    // 이전 비밀번호와 새 비밀번호가 일치
+    SAME_PASSWORD(HttpStatus.BAD_REQUEST, "PASSWORD400", "현재 비밀번호와 새 비밀번호가 같습니다."),
+    // 새 비밀번호와 새 비밀번호 확인이 일치 X
+    PASSWORD_CONFIRMATION_MISMATCH(HttpStatus.BAD_REQUEST, "PASSWORD400", "새로운 비밀번호와 비밀번호 확인이 일치하지 않습니다.");
 
     private final HttpStatus httpStatus;
     private final String code;
